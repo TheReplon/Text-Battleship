@@ -37,7 +37,8 @@ public class Grid {
 		} else {
 			shipString = shipName;
 		}
-		return this.getShipName() + "-";
+		if (this.getShipName() != "") return this.getShipName();
+		else return this.getShipName() + "-";
 		//return "Grid status: " + shipString + " - " + isShot + " at coordinates: " + this.getGridLocation();
 	}
 }
