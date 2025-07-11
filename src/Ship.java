@@ -1,6 +1,7 @@
 public class Ship {
 	String name;
 	int health;
+	final int takeDamage = 1;
 	
 	public Ship(String name, int health) {
 		this.name = name;
@@ -11,7 +12,7 @@ public class Ship {
 	
 	public int getHealth() { return health; }
 	
-	public void hitShip() { health -= 1; }
+	public void hitShip() { health -= takeDamage; }
 	
 	public Boolean shipSunk() { return health <= 0; }
 	

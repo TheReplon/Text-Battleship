@@ -12,9 +12,9 @@ public class Game {
 	public static void main(String[] args) {
 		Board newBoard = new Board();
 		
-		System.out.println(newBoard.toString());
+		//System.out.println(newBoard.toString());
 		//for (int i = 0; i < 50; i++) { System.out.println("\n"); }
-		System.out.println(newBoard.toString());
+		//System.out.println(newBoard.toString());
 
 	}
 
