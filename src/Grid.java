@@ -3,6 +3,7 @@ public class Grid {
 	Boolean isEmpty;
 	Boolean isShot;
 	String shipName;
+	Ship shipObject;
 	
 	int gridX;
 	int gridY;
@@ -22,9 +23,19 @@ public class Grid {
 	public int getX() { return gridX; }
 	public int getY() { return gridY; }
 	public String getGridLocation() { return "(" + gridX + ", " + gridY + ")"; }
+	public void setShip(Ship ship) { this.shipObject = ship; }
+	public Ship getShip() { return shipObject; }
 	
 	public void fillGrid() { isEmpty = false; }
-	public void shootGrid() { isShot = true; }
+	public void shootGrid() { 
+		isShot = true;
+		if (shipName != "") {
+			shipName = "X";
+		} else {
+			shipName = "*";
+		}
+		
+		}
 	public void setShipName(String setName) { shipName = setName; }
 	public void setX(int x) { gridX = x; }
 	public void setY(int y) { gridY = y; }
